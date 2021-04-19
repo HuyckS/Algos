@@ -10,9 +10,6 @@ function binarySearch(arr, el) {
     // loop until we find the el (element) that equals the element in the arr (arr[mid])
     // AND we need to make sure it is in the arr, if not start will be reassigned over and over to 1 more than end
     while (arr[mid] !== el && start <= end) {
-        console.log("start: " + start)
-        console.log("mid: " + mid)
-        console.log("end: " + end)
         // if the element is less than the value at the middle index, then move the end to one less than the mid
         if (el < arr[mid]) {
             end = mid - 1;
