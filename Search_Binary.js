@@ -1,5 +1,5 @@
 // Binary Search
-
+// use only on sorted data
 function binarySearch(arr, el) {
     // set a pointer at the furthest left index
     let start = 0;
