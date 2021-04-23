@@ -40,3 +40,32 @@ function bubbleSortOptimized(arr) {
     //return array
     return arr;
 }
+
+// More optimization
+
+function bubbleSortOptimized(arr) {
+    // setting this variable for when all sorting has been completed and we don't want to continue through the loop
+    let noSort;
+    // Loop through array in reverse so we 'bubble' the larger numbers to the back of the array
+    for (let i = arr.length; i > 0; i--) {
+        // Loop through array twice to compare and swap our index all the way through
+        // j will be less than the index of i because at the end on the inner loop we 
+        // will have successfully sorted and don't need to compare the values past the i index.
+        noSort = true;
+        for (let j = 0; j < i - 1; j++) {
+            // if the value on the left is greater than on the right, swap them (large values bubble to the right)
+            if (arr[j] > arr[j + 1]) {
+                // Swap
+                let temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+                noSort = false;
+            }
+        }
+        if (noSort) {
+            break;
+        }
+    }
+
+    return arr;
+}
