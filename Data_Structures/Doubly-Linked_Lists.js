@@ -1,6 +1,6 @@
 // Singly Linked List
 
-// similar to SLL, but has another pointer reference "tail" that allows access to the list from the other end
+// similar to SLL, but has another pointer reference "prev" that allows easy access reversing through the list
 // need to create class for nodes
 class Node {
     constructor(val) {
